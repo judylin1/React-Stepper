@@ -3,19 +3,19 @@ import React, { Component, PropTypes } from 'react'
 
 const store = { email: '', emailConfirm: '' }
 
-const StepTwo = React.createClass ({
+const SelectSuppliers = React.createClass ({
     getInitialState() {
         return store
     },
-    
+
     handleEmailChanged(event) {
       store.email = event.target.value
-      this.setState(store)  
+      this.setState(store)
     },
-    
+
     handleEmailConfirmChanged(event) {
       store.emailConfirm = event.target.value
-      this.setState(store)  
+      this.setState(store)
     },
 
     render() {
@@ -26,7 +26,7 @@ const StepTwo = React.createClass ({
                 <label>Your email</label>
                 <input className="u-full-width required" placeholder="test@mailbox.com"
                                                 type="email"
-                                                onChange={this.handleEmailChanged} 
+                                                onChange={this.handleEmailChanged}
                                                 value={this.state.email}
                                                 autoFocus/>
             </div>
@@ -36,7 +36,7 @@ const StepTwo = React.createClass ({
                 <label>Confirm email</label>
                 <input className="u-full-width" placeholder="Confirm email"
                                                 type="email"
-                                                onChange={this.handleEmailConfirmChanged} 
+                                                onChange={this.handleEmailConfirmChanged}
                                                 value={this.state.emailConfirm}/>
             </div>
             </div>
@@ -44,4 +44,4 @@ const StepTwo = React.createClass ({
     )}
 })
 
-export { StepTwo }
+export { SelectSuppliers }

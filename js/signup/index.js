@@ -1,15 +1,13 @@
-import React, { Component, PropTypes } from 'react'
-import { StepOne } from './stepone'
-import { StepTwo } from './steptwo'
-import { StepThree } from './stepthree'
-import { StepFour } from './stepfour'
+import React, { Component, PropTypes } from 'react';
+import { ContractSettings } from './contract-settings';
+import { SelectSuppliers } from './select-suppliers';
+import { ReviewCreate } from './review-create';
 
-const steps = 
+const steps =
     [
-      {name: 'StepOne', component: <StepOne/>},
-      {name: 'StepTwo', component: <StepTwo/>},
-      {name: 'StepThree', component: <StepThree/>},
-      {name: 'StepFour', component: <StepFour/>}
+      {name: 'Contract Settings', component: <ContractSettings/>},
+      {name: 'Select Suppliers', component: <SelectSuppliers/>},
+      {name: 'Review & Create', component: <ReviewCreate/>}
     ]
 
 export { steps }
