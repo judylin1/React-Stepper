@@ -11,7 +11,7 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _index = require('../../src/index');
+var _index = require('./src/index');
 
 var _index2 = require('./js/signup/index.js');
 
@@ -67,7 +67,7 @@ var App = (function (_React$Component) {
 
 _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById("app"));
 
-},{"../../src/index":165,"./js/signup/index.js":2,"react":164,"react-dom":35}],2:[function(require,module,exports){
+},{"./js/signup/index.js":2,"./src/index":165,"react":164,"react-dom":35}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
