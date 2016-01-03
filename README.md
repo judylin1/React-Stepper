@@ -1,4 +1,5 @@
 To run:
 
-> npm run build
+> npm run build  
+
 > open index.html
