@@ -1,47 +1,30 @@
-'use strict'
-import React, { Component, PropTypes } from 'react'
+'use strict';
 
-const store = { email: '', emailConfirm: '' }
+import React, { Component, PropTypes } from 'react';
+
+const store = { textField2: '' }
 
 const SelectSuppliers = React.createClass ({
-    getInitialState() {
-        return store
-    },
+  getInitialState() {
+    return store
+  },
 
-    handleEmailChanged(event) {
-      store.email = event.target.value
-      this.setState(store)
-    },
+  handleChange(e) {
+    store.textField2 = e.target.value
+    this.setState(store)
+  },
 
-    handleEmailConfirmChanged(event) {
-      store.emailConfirm = event.target.value
-      this.setState(store)
-    },
-
-    render() {
-        return (
-        <div>
-            <div className="row">
-            <div className="six columns">
-                <label>Your email</label>
-                <input className="u-full-width required" placeholder="test@mailbox.com"
-                                                type="email"
-                                                onChange={this.handleEmailChanged}
-                                                value={this.state.email}
-                                                autoFocus/>
-            </div>
-            </div>
-            <div className="row">
-            <div className="six columns">
-                <label>Confirm email</label>
-                <input className="u-full-width" placeholder="Confirm email"
-                                                type="email"
-                                                onChange={this.handleEmailConfirmChanged}
-                                                value={this.state.emailConfirm}/>
-            </div>
-            </div>
-        </div>
-    )}
+  render() {
+    return (
+    <div>
+      <label>Test Field 2</label>
+      <br />
+      <input type="text"
+             onChange={this.handleChange}
+             value={this.state.textField2}
+             autoFocus/>
+    </div>
+  )}
 })
 
 export { SelectSuppliers }

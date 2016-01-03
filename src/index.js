@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react';
 
 function getNavStates(indx, length) {
   let styles = []
@@ -21,9 +21,9 @@ function getNavStates(indx, length) {
 const Multistep = React.createClass({
   getInitialState() {
     return {
-        compState: 0,
-        navState: getNavStates(0, this.props.steps.length)
-      }
+      compState: 0,
+      navState: getNavStates(0, this.props.steps.length)
+    }
   },
 
   setNavState(next) {
@@ -55,7 +55,7 @@ const Multistep = React.createClass({
 
   previous() {
     if (this.state.compState > 0) {
-        this.setNavState(this.state.compState - 1)
+      this.setNavState(this.state.compState - 1)
     }
   },
 

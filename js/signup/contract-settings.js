@@ -1,46 +1,29 @@
-'use strict'
-import React, { Component, PropTypes } from 'react'
+'use strict';
 
-const store = { firstName: '', lastName: '' }
+import React, { Component, PropTypes } from 'react';
+
+const store = { testField1: '' };
 
 const ContractSettings = React.createClass ({
-    getInitialState() {
-        return store
-    },
+  getInitialState() {
+    return store
+  },
 
-    handleFirstNameChanged(event) {
-      store.firstName = event.target.value
-      this.setState(store)
-    },
+  handleChange(e) {
+    store.testField1 = e.target.value
+    this.setState(store)
+  },
 
-    handleLastNameChanged(event) {
-      store.lastName = event.target.value
-      this.setState(store)
-    },
-
-    render() {
-        return (
-        <div>
-            <div className="row">
-            <div className="six columns">
-                <label>First Name</label>
-                <input className="u-full-width" placeholder="First Name"
-                                                type="text"
-                                                onChange={this.handleFirstNameChanged}
-                                                value={this.state.firstName}
-                                                autoFocus/>
-            </div>
-            </div>
-            <div className="row">
-            <div className="six columns">
-                <label>Last Name</label>
-                <input className="u-full-width" placeholder="Last Name"
-                                                type="text"
-                                                onChange={this.handleLastNameChanged}
-                                                value={this.state.lastName}/>
-            </div>
-            </div>
-        </div>
+  render() {
+    return (
+      <div>
+        <label>Test Field 1</label>
+        <br />
+        <input type="text"
+               onChange={this.handleChange}
+               value={this.state.testField1}
+               autoFocus/>
+      </div>
     )}
 })
 

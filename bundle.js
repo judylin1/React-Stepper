@@ -56,7 +56,7 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.ContractSettings = undefined;
 
@@ -66,61 +66,32 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var store = { firstName: '', lastName: '' };
+var store = { testField1: '' };
 
 var ContractSettings = _react2.default.createClass({
-    getInitialState: function getInitialState() {
-        return store;
-    },
-    handleFirstNameChanged: function handleFirstNameChanged(event) {
-        store.firstName = event.target.value;
-        this.setState(store);
-    },
-    handleLastNameChanged: function handleLastNameChanged(event) {
-        store.lastName = event.target.value;
-        this.setState(store);
-    },
-    render: function render() {
-        return _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-                'div',
-                { className: 'row' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'six columns' },
-                    _react2.default.createElement(
-                        'label',
-                        null,
-                        'First Name'
-                    ),
-                    _react2.default.createElement('input', { className: 'u-full-width', placeholder: 'First Name',
-                        type: 'text',
-                        onChange: this.handleFirstNameChanged,
-                        value: this.state.firstName,
-                        autoFocus: true })
-                )
-            ),
-            _react2.default.createElement(
-                'div',
-                { className: 'row' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'six columns' },
-                    _react2.default.createElement(
-                        'label',
-                        null,
-                        'Last Name'
-                    ),
-                    _react2.default.createElement('input', { className: 'u-full-width', placeholder: 'Last Name',
-                        type: 'text',
-                        onChange: this.handleLastNameChanged,
-                        value: this.state.lastName })
-                )
-            )
-        );
-    }
+  getInitialState: function getInitialState() {
+    return store;
+  },
+  handleChange: function handleChange(e) {
+    store.testField1 = e.target.value;
+    this.setState(store);
+  },
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(
+        'label',
+        null,
+        'Test Field 1'
+      ),
+      _react2.default.createElement('br', null),
+      _react2.default.createElement('input', { type: 'text',
+        onChange: this.handleChange,
+        value: this.state.testField1,
+        autoFocus: true })
+    );
+  }
 });
 
 exports.ContractSettings = ContractSettings;
@@ -153,7 +124,7 @@ exports.steps = steps;
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.ReviewCreate = undefined;
 
@@ -163,61 +134,32 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var store = { password: '123', passwordConfirm: '' };
+var store = { textField3: '' };
 
 var ReviewCreate = _react2.default.createClass({
-    getInitialState: function getInitialState() {
-        return store;
-    },
-    handlePasswordChanged: function handlePasswordChanged(event) {
-        store.password = event.target.value;
-        this.setState(store);
-    },
-    handlePasswordConfirmChanged: function handlePasswordConfirmChanged(event) {
-        store.passwordConfirm = event.target.value;
-        this.setState(store);
-    },
-    render: function render() {
-        return _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-                'div',
-                { className: 'row' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'six columns' },
-                    _react2.default.createElement(
-                        'label',
-                        null,
-                        'Password'
-                    ),
-                    _react2.default.createElement('input', { className: 'u-full-width required', placeholder: 'Password',
-                        type: 'password',
-                        onChange: this.handlePasswordChanged,
-                        value: this.state.password,
-                        autoFocus: true })
-                )
-            ),
-            _react2.default.createElement(
-                'div',
-                { className: 'row' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'six columns' },
-                    _react2.default.createElement(
-                        'label',
-                        null,
-                        'Confirm password'
-                    ),
-                    _react2.default.createElement('input', { className: 'u-full-width', placeholder: 'Confirm Password',
-                        type: 'password',
-                        onChange: this.handlePasswordConfirmChanged,
-                        value: this.state.passwordConfirm })
-                )
-            )
-        );
-    }
+  getInitialState: function getInitialState() {
+    return store;
+  },
+  handleChange: function handleChange(e) {
+    store.textField3 = e.target.value;
+    this.setState(store);
+  },
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(
+        'label',
+        null,
+        'Test Field 3'
+      ),
+      _react2.default.createElement('br', null),
+      _react2.default.createElement('input', { type: 'text',
+        onChange: this.handleChange,
+        value: this.state.textField3,
+        autoFocus: true })
+    );
+  }
 });
 
 exports.ReviewCreate = ReviewCreate;
@@ -226,7 +168,7 @@ exports.ReviewCreate = ReviewCreate;
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.SelectSuppliers = undefined;
 
@@ -236,61 +178,32 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var store = { email: '', emailConfirm: '' };
+var store = { textField2: '' };
 
 var SelectSuppliers = _react2.default.createClass({
-    getInitialState: function getInitialState() {
-        return store;
-    },
-    handleEmailChanged: function handleEmailChanged(event) {
-        store.email = event.target.value;
-        this.setState(store);
-    },
-    handleEmailConfirmChanged: function handleEmailConfirmChanged(event) {
-        store.emailConfirm = event.target.value;
-        this.setState(store);
-    },
-    render: function render() {
-        return _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(
-                'div',
-                { className: 'row' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'six columns' },
-                    _react2.default.createElement(
-                        'label',
-                        null,
-                        'Your email'
-                    ),
-                    _react2.default.createElement('input', { className: 'u-full-width required', placeholder: 'test@mailbox.com',
-                        type: 'email',
-                        onChange: this.handleEmailChanged,
-                        value: this.state.email,
-                        autoFocus: true })
-                )
-            ),
-            _react2.default.createElement(
-                'div',
-                { className: 'row' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'six columns' },
-                    _react2.default.createElement(
-                        'label',
-                        null,
-                        'Confirm email'
-                    ),
-                    _react2.default.createElement('input', { className: 'u-full-width', placeholder: 'Confirm email',
-                        type: 'email',
-                        onChange: this.handleEmailConfirmChanged,
-                        value: this.state.emailConfirm })
-                )
-            )
-        );
-    }
+  getInitialState: function getInitialState() {
+    return store;
+  },
+  handleChange: function handleChange(e) {
+    store.textField2 = e.target.value;
+    this.setState(store);
+  },
+  render: function render() {
+    return _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(
+        'label',
+        null,
+        'Test Field 2'
+      ),
+      _react2.default.createElement('br', null),
+      _react2.default.createElement('input', { type: 'text',
+        onChange: this.handleChange,
+        value: this.state.textField2,
+        autoFocus: true })
+    );
+  }
 });
 
 exports.SelectSuppliers = SelectSuppliers;
