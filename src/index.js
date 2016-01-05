@@ -59,36 +59,25 @@ const Multistep = React.createClass({
     }
   },
 
-  render: function render() {
+  render: function() {
     var _this = this
 
-    return React.createElement(
-      'div',
-      { className: 'container', onKeyDown: this.handleKeyDown },
-      React.createElement(
-        'ol',
-        { className: 'progtrckr' }, ' ',
-        this.props.steps.map(function (s, i) {
-          return React.createElement(
-            'li',
-            { value: i, key: i,
-              className: "progtrckr-" + _this.state.navState.styles[i],
-              onClick: _this.handleOnClick },
-            React.createElement(
-              'em',
-              null,
-              i + 1
-            ),
-            React.createElement(
-              'span',
-              null,
-              _this.props.steps[i].name
-            )
+    return (
+      <div className='progtrckr' onKeyDown={this.handleKeyDown}>
+        {this.props.steps.map(function (s, i) {
+          return (
+            <div className='container'>
+              <li value={i} key={i} className={"progtrckr-" + _this.state.navState.styles[i]} onClick={_this.handleOnClick}>
+                <span className='title'>{_this.props.steps[i].name}</span>
+                <span className='grey-line'></span>
+              </li>
+            </div>
           )
-        })
-      ),
-      this.props.steps[this.state.compState].component
-    )}
-})
+      }, this)}
+        {this.props.steps[this.state.compState].component}
+      </div>
+    );
+  }
+});
 
 export { Multistep }

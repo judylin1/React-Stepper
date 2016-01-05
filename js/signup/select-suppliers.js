@@ -16,14 +16,14 @@ const SelectSuppliers = React.createClass ({
 
   render() {
     return (
-    <div>
-      <label>Test Field 2</label>
-      <br />
-      <input type="text"
-             onChange={this.handleChange}
-             value={this.state.textField2}
-             autoFocus/>
-    </div>
+      <div className='fields'>
+        <label>Test Field 2</label>
+        <br />
+        <input type="text"
+               onChange={this.handleChange}
+               value={this.state.textField2}
+               autoFocus/>
+      </div>
   )}
 })
 

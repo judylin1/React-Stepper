@@ -37,12 +37,8 @@ var App = (function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'container' },
-        _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(_index.Multistep, { steps: _index2.steps })
-        )
+        null,
+        _react2.default.createElement(_index.Multistep, { steps: _index2.steps })
       );
     }
   }]);
@@ -79,7 +75,7 @@ var ContractSettings = _react2.default.createClass({
   render: function render() {
     return _react2.default.createElement(
       'div',
-      null,
+      { className: 'fields' },
       _react2.default.createElement(
         'label',
         null,
@@ -147,7 +143,7 @@ var ReviewCreate = _react2.default.createClass({
   render: function render() {
     return _react2.default.createElement(
       'div',
-      null,
+      { className: 'fields' },
       _react2.default.createElement(
         'label',
         null,
@@ -191,7 +187,7 @@ var SelectSuppliers = _react2.default.createClass({
   render: function render() {
     return _react2.default.createElement(
       'div',
-      null,
+      { className: 'fields' },
       _react2.default.createElement(
         'label',
         null,
@@ -19293,11 +19289,27 @@ var Multistep = _react2.default.createClass({
   render: function render() {
     var _this = this;
 
-    return _react2.default.createElement('div', { className: 'container', onKeyDown: this.handleKeyDown }, _react2.default.createElement('ol', { className: 'progtrckr' }, ' ', this.props.steps.map(function (s, i) {
-      return _react2.default.createElement('li', { value: i, key: i,
-        className: "progtrckr-" + _this.state.navState.styles[i],
-        onClick: _this.handleOnClick }, _react2.default.createElement('em', null, i + 1), _react2.default.createElement('span', null, _this.props.steps[i].name));
-    })), this.props.steps[this.state.compState].component);
+    return _react2.default.createElement(
+      'div',
+      { className: 'progtrckr', onKeyDown: this.handleKeyDown },
+      this.props.steps.map(function (s, i) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'container' },
+          _react2.default.createElement(
+            'li',
+            { value: i, key: i, className: "progtrckr-" + _this.state.navState.styles[i], onClick: _this.handleOnClick },
+            _react2.default.createElement(
+              'span',
+              { className: 'title' },
+              _this.props.steps[i].name
+            ),
+            _react2.default.createElement('span', { className: 'grey-line' })
+          )
+        );
+      }, this),
+      this.props.steps[this.state.compState].component
+    );
   }
 });
 

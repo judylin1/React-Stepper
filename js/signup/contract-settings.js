@@ -16,7 +16,7 @@ const ContractSettings = React.createClass ({
 
   render() {
     return (
-      <div>
+      <div className='fields'>
         <label>Test Field 1</label>
         <br />
         <input type="text"

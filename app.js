@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
@@ -8,10 +8,8 @@ import { steps } from './js/signup/index.js';
 class App extends React.Component {
   render() {
     return (
-      <div className="container">
-        <div>
-          <Multistep steps={steps}/>
-        </div>
+      <div>
+        <Multistep steps={steps}/>
       </div>
     )
   }

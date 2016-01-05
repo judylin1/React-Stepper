@@ -16,7 +16,7 @@ const ReviewCreate = React.createClass ({
 
   render() {
     return (
-      <div>
+      <div className='fields'>
         <label>Test Field 3</label>
         <br />
         <input type="text"

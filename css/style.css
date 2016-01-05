@@ -1,93 +1,121 @@
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
-html {
-  font-size: 62.5%;
-  overflow-y: scroll;
+.fields {
+  margin-top: 5%;
 }
 
-body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
-  color: #222;
+.grey-line {
+  display: inline-block;
+  border-top: solid #BDBDBD;
+  border-width: thin;
+  width: 70px;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.container:nth-child(3) .grey-line {
+  display: none;
+}
+
+.container {
+  display: inline-block;
 }
 
 /* PROGRESS BAR */
-
-ol.progtrckr {
-  margin: 0;
-  padding-bottom: 2.2rem;
-  list-style-type: none;
+div.progtrckr {
+  border: 1px solid green;
+  display: inline-block;
+  padding: 24px;
+  height: 72px;
 }
-ol.progtrckr li {
+
+div.progtrckr li {
   display: inline-block;
   text-align: center;
-  line-height: 4.5rem;
-  padding: 0 0.7rem;
   cursor: pointer;
 }
-ol.progtrckr li span {
-  padding: 0 1.5rem;
+
+.title {
+  display: inline-block;
+  margin-left: 8px;
+  margin-top: 3px;
 }
 
-.progtrckr em {
-  display: none;
-  font-weight: 700;
-  padding-left: 1rem;
+div.progtrckr li.progtrckr-todo {
+  color: #000000;
+  opacity: 54%;
 }
 
-ol.progtrckr li.progtrckr-todo {
-  color: silver;
-  border-bottom: 4px solid silver;
-}
-ol.progtrckr li.progtrckr-doing {
+div.progtrckr li.progtrckr-doing {
   color: black;
-  border-bottom: 4px solid #33C3F0;
+  font-weight: 600;
 }
-ol.progtrckr li.progtrckr-done {
+
+div.progtrckr li.progtrckr-done {
   color: black;
-  border-bottom: 4px solid #33C3F0;
+  font-weight: 600;
 }
-ol.progtrckr li:after {
-  content: "\00a0\00a0";
-}
-ol.progtrckr li:before {
-  position: relative;
-  bottom: -3.7rem;
+
+div.progtrckr li:before {
   float: left;
-  left: 50%;
-}
-ol.progtrckr li.progtrckr-todo:before {
-  content: "\039F";
-  color: silver;
-  background-color: white;
-  width: 1.2em;
-  line-height: 1.4em;
-}
-ol.progtrckr li.progtrckr-todo:hover:before {
-  color: #0FA0CE;
 }
 
-ol.progtrckr li.progtrckr-doing:before {
-  content: "\2022";
-  color: white;
-  background-color: #33C3F0;
-  width: 1.2em;
-  line-height: 1.2em;
-  border-radius: 1.2em;
-}
-ol.progtrckr li.progtrckr-doing:hover:before {
-  color: #0FA0CE;
+div.progtrckr li.progtrckr-todo:before {
+  content: "";
+  background: #BDBDBD;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
 }
 
-ol.progtrckr li.progtrckr-done:before {
+.container:nth-child(2) li.progtrckr-todo:before {
+  content: '2';
+  color: #FFFFFF;
+  line-height: 1.5em;
+}
+
+.container:nth-child(3) li.progtrckr-todo:before {
+  content: '3';
+  color: #FFFFFF;
+  line-height: 1.5em;
+}
+
+div.progtrckr li.progtrckr-doing:before {
+  content: "";
+  color: #FFFFFF;
+  background: #00bcd4;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+}
+
+.container:nth-child(1) li.progtrckr-doing:before {
+  content: '1';
+  color: #FFFFFF;
+  line-height: 1.7em;
+  font-size: 15px;
+}
+
+.container:nth-child(2) li.progtrckr-doing:before {
+  content: '2';
+  color: #FFFFFF;
+  line-height: 1.7em;
+  font-size: 15px;
+}
+
+.container:nth-child(3) li.progtrckr-doing:before {
+  content: '3';
+  color: #FFFFFF;
+  line-height: 1.7em;
+  font-size: 15px;
+}
+
+div.progtrckr li.progtrckr-done:before {
   content: "\2713";
   color: white;
-  background-color: #33C3F0;
-  width: 1.2em;
-  line-height: 1.2em;
+  background: #00bcd4;
+  line-height: 1.5em;
   border-radius: 1.2em;
-}
-ol.progtrckr li.progtrckr-done:hover:before {
-  color: #0FA0CE;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
 }
