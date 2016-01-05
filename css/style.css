@@ -67,7 +67,7 @@ div.progtrckr li:before {
 }
 
 div.progtrckr li.progtrckr-todo:before {
-  content: "";
+  content: " ";
   background: #BDBDBD;
   height: 24px;
   width: 24px;
@@ -77,13 +77,13 @@ div.progtrckr li.progtrckr-todo:before {
 .container:nth-child(2) li.progtrckr-todo:before {
   content: '2';
   color: #FFFFFF;
-  line-height: 1.5em;
+  line-height: 1.7em;
 }
 
 .container:nth-child(3) li.progtrckr-todo:before {
   content: '3';
   color: #FFFFFF;
-  line-height: 1.5em;
+  line-height: 1.7em;
 }
 
 div.progtrckr li.progtrckr-doing:before {
