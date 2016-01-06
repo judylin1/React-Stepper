@@ -67,18 +67,16 @@
   height: 24px;
   width: 24px;
   border-radius: 50%;
+  color: #FFFFFF;
+  line-height: 1.6em;
 }
 
 .step-container:nth-child(2) li.stepper-container-todo:before {
   content: '2';
-  color: #FFFFFF;
-  line-height: 1.7em;
 }
 
 .step-container:nth-child(3) li.stepper-container-todo:before {
   content: '3';
-  color: #FFFFFF;
-  line-height: 1.7em;
 }
 
 /* doing */
@@ -89,27 +87,21 @@
   height: 24px;
   width: 24px;
   border-radius: 50%;
+  color: #FFFFFF;
+  line-height: 1.5em;
+  font-size: 15px;
 }
 
 .step-container:nth-child(1) li.stepper-container-doing:before {
   content: '1';
-  color: #FFFFFF;
-  line-height: 1.7em;
-  font-size: 15px;
 }
 
 .step-container:nth-child(2) li.stepper-container-doing:before {
   content: '2';
-  color: #FFFFFF;
-  line-height: 1.7em;
-  font-size: 15px;
 }
 
 .step-container:nth-child(3) li.stepper-container-doing:before {
   content: '3';
-  color: #FFFFFF;
-  line-height: 1.7em;
-  font-size: 15px;
 }
 
 /* done */
