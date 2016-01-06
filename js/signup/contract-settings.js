@@ -9,22 +9,22 @@ const ContractSettings = React.createClass ({
     return store
   },
 
-  handleChange(e) {
+  handleTestBoxChange(e) {
     store.testField1 = e.target.value
     this.setState(store)
   },
 
   render() {
     return (
-      <div className='fields'>
+      <div className='test-fields'>
         <label>Test Field 1</label>
         <br />
         <input type="text"
-               onChange={this.handleChange}
+               onChange={this.handleTestBoxChange}
                value={this.state.testField1}
                autoFocus/>
       </div>
-    )}
+    )},
 })
 
 export { ContractSettings }

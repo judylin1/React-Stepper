@@ -9,22 +9,22 @@ const SelectSuppliers = React.createClass ({
     return store
   },
 
-  handleChange(e) {
+  handleTestBoxChange(e) {
     store.textField2 = e.target.value
     this.setState(store)
   },
 
   render() {
     return (
-      <div className='fields'>
+      <div className='test-fields'>
         <label>Test Field 2</label>
         <br />
         <input type="text"
-               onChange={this.handleChange}
+               onChange={this.handleTestBoxChange}
                value={this.state.textField2}
                autoFocus/>
       </div>
-  )}
+  )},
 })
 
 export { SelectSuppliers }

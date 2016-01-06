@@ -2,27 +2,19 @@
 
 import React, { Component, PropTypes } from 'react';
 
-function getNavStates(indx, length) {
+function getNavStates(index, length) {
   let styles = []
   for (let i=0; i<length; i++) {
-    if(i < indx) {
-      styles.push('done')
-    }
-    else if(i === indx) {
-      styles.push('doing')
-    }
-    else {
-      styles.push('todo')
-    }
+    (i < index) ? styles.push('done') : (i === index) ? styles.push('doing') : styles.push('todo')
   }
-  return { current: indx, styles: styles }
+  return { current: index, styles: styles }
 }
 
 const Multistep = React.createClass({
   getInitialState() {
     return {
       compState: 0,
-      navState: getNavStates(0, this.props.steps.length)
+      navState: getNavStates(0, this.props.steps.length),
     }
   },
 
@@ -33,6 +25,7 @@ const Multistep = React.createClass({
     }
   },
 
+  // if enter key (13) is pressed
   handleKeyDown(e) {
     if(e.which === 13) {
       this.next()
@@ -60,16 +53,16 @@ const Multistep = React.createClass({
   },
 
   render: function() {
-    var _this = this
+    const _this = this
 
     return (
-      <div className='progtrckr' onKeyDown={this.handleKeyDown}>
+      <div className='stepper-container' onKeyDown={this.handleKeyDown}>
         {this.props.steps.map(function (s, i) {
           return (
-            <div className='container'>
-              <li value={i} key={i} className={"progtrckr-" + _this.state.navState.styles[i]} onClick={_this.handleOnClick}>
-                <span className='title'>{_this.props.steps[i].name}</span>
-                <span className='grey-line'></span>
+            <div className='step-container'>
+              <li value={i} key={i} className={"stepper-container-" + _this.state.navState.styles[i]} onClick={_this.handleOnClick}>
+                <span className='step-title'>{_this.props.steps[i].name}</span>
+                <span className='step-grey-line'></span>
               </li>
             </div>
           )
@@ -77,7 +70,7 @@ const Multistep = React.createClass({
         {this.props.steps[this.state.compState].component}
       </div>
     );
-  }
+  },
 });
 
 export { Multistep }

@@ -9,22 +9,22 @@ const ReviewCreate = React.createClass ({
     return store
   },
 
-  handleChange(e) {
+  handleTestBoxChange(e) {
     store.textField3 = e.target.value
     this.setState(store)
   },
 
   render() {
     return (
-      <div className='fields'>
+      <div className='test-fields'>
         <label>Test Field 3</label>
         <br />
         <input type="text"
-               onChange={this.handleChange}
+               onChange={this.handleTestBoxChange}
                value={this.state.textField3}
                autoFocus/>
       </div>
-  )}
+  )},
 })
 
 export { ReviewCreate }

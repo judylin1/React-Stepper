@@ -1,8 +1,9 @@
-.fields {
+.test-fields {
   margin-top: 5%;
 }
 
-.grey-line {
+/* PROGRESS BAR */
+.step-grey-line {
   display: inline-block;
   border-top: solid #BDBDBD;
   border-width: thin;
@@ -13,16 +14,15 @@
 }
 
 /*hide last grey line*/
-.container:nth-child(3) .grey-line {
+.step-container:nth-child(3) .step-grey-line {
   display: none;
 }
 
-.container {
+.step-container {
   display: inline-block;
 }
 
-/* PROGRESS BAR */
-div.progtrckr {
+.stepper-container {
   border: 1px solid #EEEEEE;
   display: inline-block;
   padding: 24px;
@@ -30,43 +30,38 @@ div.progtrckr {
   box-shadow: 0px 2px 2px #E0E0E0;
 }
 
-div.progtrckr li {
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-}
-
-.title {
+.step-title {
   display: inline-block;
   margin-left: 8px;
   margin-top: 3px;
   font-family: 'Roboto', sans-serif;
 }
 
-div.progtrckr li.progtrckr-todo {
+.stepper-container li:before {
+  float: left;
+}
+
+.stepper-container li {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  float: left;
+}
+
+.stepper-container li.stepper-container-todo {
   color: #BDBDBD;
   font-size: 14px;
 }
 
-div.progtrckr li.progtrckr-doing {
+.stepper-container li.stepper-container-doing, li.stepper-container-done {
   color: #000000;
   opacity: 87%;
   font-size: 14px;
   font-weight: 500;
 }
 
-div.progtrckr li.progtrckr-done {
-  color: #000000;
-  opacity: 87%;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-div.progtrckr li:before {
-  float: left;
-}
-
-div.progtrckr li.progtrckr-todo:before {
+/* todo */
+.stepper-container li.stepper-container-todo:before {
   content: " ";
   background: #BDBDBD;
   height: 24px;
@@ -74,19 +69,20 @@ div.progtrckr li.progtrckr-todo:before {
   border-radius: 50%;
 }
 
-.container:nth-child(2) li.progtrckr-todo:before {
+.step-container:nth-child(2) li.stepper-container-todo:before {
   content: '2';
   color: #FFFFFF;
   line-height: 1.7em;
 }
 
-.container:nth-child(3) li.progtrckr-todo:before {
+.step-container:nth-child(3) li.stepper-container-todo:before {
   content: '3';
   color: #FFFFFF;
   line-height: 1.7em;
 }
 
-div.progtrckr li.progtrckr-doing:before {
+/* doing */
+.stepper-container li.stepper-container-doing:before {
   content: "";
   color: #FFFFFF;
   background: #00bcd4;
@@ -95,31 +91,32 @@ div.progtrckr li.progtrckr-doing:before {
   border-radius: 50%;
 }
 
-.container:nth-child(1) li.progtrckr-doing:before {
+.step-container:nth-child(1) li.stepper-container-doing:before {
   content: '1';
   color: #FFFFFF;
   line-height: 1.7em;
   font-size: 15px;
 }
 
-.container:nth-child(2) li.progtrckr-doing:before {
+.step-container:nth-child(2) li.stepper-container-doing:before {
   content: '2';
   color: #FFFFFF;
   line-height: 1.7em;
   font-size: 15px;
 }
 
-.container:nth-child(3) li.progtrckr-doing:before {
+.step-container:nth-child(3) li.stepper-container-doing:before {
   content: '3';
   color: #FFFFFF;
   line-height: 1.7em;
   font-size: 15px;
 }
 
-div.progtrckr li.progtrckr-done:before {
+/* done */
+.stepper-container li.stepper-container-done:before {
   font-family: 'Material Icons';
   content: '\e876';
-  color: white;
+  color: #FFFFFF;
   background: #00bcd4;
   line-height: 1.7em;
   border-radius: 1.2em;

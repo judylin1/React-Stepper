@@ -1,5 +1,5 @@
 To run:
 
-> npm run build  
+> npm install  
 
-> open index.html
+> npm start
