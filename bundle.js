@@ -19265,16 +19265,16 @@ var Multistep = _react2.default.createClass({
       this.setState({ compState: next });
     }
   },
-  handleKeyDown: function handleKeyDown(evt) {
-    if (evt.which === 13) {
+  handleKeyDown: function handleKeyDown(e) {
+    if (e.which === 13) {
       this.next();
     }
   },
-  handleOnClick: function handleOnClick(evt) {
-    if (evt.target.value === this.props.steps.length - 1 && this.state.compState === this.props.steps.length - 1) {
+  handleOnClick: function handleOnClick(e) {
+    if (e.target.value === this.props.steps.length - 1 && this.state.compState === this.props.steps.length - 1) {
       this.setNavState(this.props.steps.length);
     } else {
-      this.setNavState(evt.target.value);
+      this.setNavState(e.target.value);
     }
   },
   next: function next() {
