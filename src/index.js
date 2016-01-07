@@ -26,6 +26,7 @@ const Multistep = React.createClass({
 
   setNavState(next) {
     this.setState({ navState: getNavStates(next, this.props.steps.length) })
+    // if current step (next) is less than steps.length (3) move to next compState
     if (next < this.props.steps.length) {
       this.setState({ compState: next });
     }
@@ -49,12 +50,6 @@ const Multistep = React.createClass({
 
   next() {
     this.setNavState(this.state.compState + 1);
-  },
-
-  previous() {
-    if (this.state.compState > 0) {
-      this.setNavState(this.state.compState - 1);
-    }
   },
 
   render() {
